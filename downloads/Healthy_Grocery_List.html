@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homixo Healthy Grocery List</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; color: #2D3B40; background: #FAFAF9; }
+    h1 { color: #F27033; text-align: center; }
+    .category { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .category h3 { margin-top: 0; border-bottom: 2px solid #2D3B40; padding-bottom: 5px; color: #2D3B40; }
+    .item { display: flex; align-items: center; margin-bottom: 8px; }
+    .item input[type="checkbox"] { margin-right: 10px; width: 18px; height: 18px; }
+    .item input[type="text"] { flex: 1; border: none; background: transparent; border-bottom: 1px dashed #ccc; outline: none; font-family: inherit; font-size: 16px; padding: 2px; }
+    @media print {
+      body { background: white; }
+      .category { box-shadow: none; border: 1px solid #ddd; }
+      button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Homixo Healthy Grocery List 🛒</h1>
+  <p style="text-align: center; color: #666; margin-bottom: 30px;">Stock up on ingredients to practice your knife skills!</p>
+  
+  <div class="category">
+    <h3>Produce (Veggies & Fruits)</h3>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Onions"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Tomatoes"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Bell Peppers"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Cilantro / Coriander"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Apples"></div>
+  </div>
+  
+  <div class="category">
+    <h3>Proteins</h3>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Paneer / Tofu"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Chicken Breast"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Eggs"></div>
+  </div>
+  
+  <div class="category">
+    <h3>Pantry Staples</h3>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Olive Oil"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Rice"></div>
+    <div class="item"><input type="checkbox"><input type="text" placeholder="e.g. Lentils"></div>
+  </div>
+  
+  <button onclick="window.print()" style="display: block; width: 100%; padding: 15px; background: #2D3B40; color: white; border: none; border-radius: 8px; font-size: 16px; margin-top: 20px; cursor: pointer;">Save as PDF / Print</button>
+</body>
+</html>
