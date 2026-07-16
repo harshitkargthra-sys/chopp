@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homixo Weekly Meal Planner</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; color: #2D3B40; background: #FAFAF9; }
+    h1 { color: #F27033; text-align: center; }
+    .day { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #2D3B40; }
+    .day h3 { margin-top: 0; }
+    .meals { display: flex; flex-direction: column; gap: 10px; }
+    .meal { display: flex; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+    .meal strong { width: 80px; font-size: 14px; color: #666; }
+    .meal-input { flex: 1; border: none; background: transparent; border-bottom: 1px dashed #ccc; outline: none; padding: 5px; font-family: inherit; }
+    @media print {
+      body { background: white; }
+      .day { box-shadow: none; border: 1px solid #ddd; border-left: 5px solid #2D3B40; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Homixo Weekly Meal Planner 📝</h1>
+  <p style="text-align: center; color: #666; margin-bottom: 30px;">Plan your chopping and prep for the week ahead!</p>
+  
+  <div class="day"><h3>Monday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  <div class="day"><h3>Tuesday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  <div class="day"><h3>Wednesday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  <div class="day"><h3>Thursday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  <div class="day"><h3>Friday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  <div class="day"><h3>Saturday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  <div class="day"><h3>Sunday</h3><div class="meals"><div class="meal"><strong>Breakfast</strong><input class="meal-input"></div><div class="meal"><strong>Lunch</strong><input class="meal-input"></div><div class="meal"><strong>Dinner</strong><input class="meal-input"></div></div></div>
+  
+  <button onclick="window.print()" style="display: block; width: 100%; padding: 15px; background: #2D3B40; color: white; border: none; border-radius: 8px; font-size: 16px; margin-top: 20px; cursor: pointer;">Save as PDF / Print</button>
+</body>
+</html>

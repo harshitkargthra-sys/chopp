@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Homixo Chop & Master™ - Your exclusive kitchen learning companion.">
+  <meta name="theme-color" content="#2D3B40">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Homixo Chop & Master™</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================
+       VIEW: HOMEPAGE (Landing)
+       ========================================= -->
+  <div id="viewHome" class="view active">
+    <!-- Hero Image Placeholder (Chopping board with vegetables) -->
+    <div class="hero-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556910103-1c02745a872e?auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+    
+    <div class="hero-header">
+      <h1>Homixo Chop & Master™</h1>
+      <p style="font-weight: 500; color: var(--clr-charcoal);">Master Every Cut. Cook With Confidence.</p>
+      <p class="mt-2" style="font-size: 14px;">Your exclusive kitchen learning companion.</p>
+      
+      <div class="mt-8" style="display: flex; flex-direction: column; gap: 16px;">
+        <button id="btnRegisterProduct" class="btn btn-primary">Register Product</button>
+        <button id="btnExploreAcademy" class="btn btn-outline">Explore Academy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: REGISTRATION
+       ========================================= -->
+  <div id="viewRegister" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back" data-target="viewHome">←</div>
+      <div class="top-bar__title">Register Product</div>
+    </div>
+    
+    <div class="container section-padding">
+      <h2 class="mb-6" id="regTitle">Activate Your Warranty & Unlocks</h2>
+      
+      <form id="regForm">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Mobile Number</label>
+          <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="name@example.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Order ID</label>
+          <input type="text" class="form-input" placeholder="Amazon/Flipkart/Web Order ID" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Purchased From</label>
+          <select class="form-select" required>
+            <option value="" disabled selected>Select Platform</option>
+            <option value="amazon">Amazon</option>
+            <option value="flipkart">Flipkart</option>
+            <option value="website">Homixo Website</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary mt-4">Complete Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: DASHBOARD
+       ========================================= -->
+  <div id="viewDashboard" class="view">
+    <div class="hero-header" style="padding-top: 20px; padding-bottom: 10px; text-align: left;">
+      <h1 style="font-size: 24px;">Welcome Back 👋</h1>
+      <p>What would you like to master today?</p>
+    </div>
+    
+    <div class="dashboard-grid">
+      <div class="dash-card" data-target="viewAcademy">
+        <div class="dash-card__icon">🎓</div>
+        <div class="dash-card__title">Knife Academy</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+      
+      <div class="dash-card" data-target="viewIngredients">
+        <div class="dash-card__icon">🥕</div>
+        <div class="dash-card__title">Ingredient Guide</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+      
+      <div class="dash-card" data-target="viewRecipes">
+        <div class="dash-card__icon">🍽️</div>
+        <div class="dash-card__title">Recipe Library (100)</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+      
+      <div class="dash-card" data-target="viewChallenge">
+        <div class="dash-card__icon">📅</div>
+        <div class="dash-card__title">21-Day Challenge</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+      
+      <div class="dash-card" data-target="viewCare">
+        <div class="dash-card__icon">🧼</div>
+        <div class="dash-card__title">Care Guide</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+      
+      <div class="dash-card" data-target="viewWarranty" id="dashCardWarranty">
+        <div class="dash-card__icon">🛡️</div>
+        <div class="dash-card__title">Warranty</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+      
+      <div class="dash-card" data-target="viewBonus">
+        <div class="dash-card__icon">🎁</div>
+        <div class="dash-card__title">Bonus Downloads</div>
+        <div class="dash-card__arrow">→</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: KNIFE ACADEMY
+       ========================================= -->
+  <div id="viewAcademy" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">🎓 Knife Academy</div>
+    </div>
+    
+    <div class="container section-padding">
+      <div class="hero-image mb-6" style="background: url('https://images.unsplash.com/photo-1590680371465-4f40d12e8648?auto=format&fit=crop&w=600&q=80') center/cover; border-radius: var(--radius-xl); height: 180px;"></div>
+      
+      <!-- Lesson 1 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 1</span>
+          <h3 class="lesson-card__title">Knife Anatomy</h3>
+          <p style="color: var(--clr-gray-500); font-size: 14px;">Understand the tool in your hand.</p>
+          <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=600&q=80" alt="Knife Diagram" style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-md); margin-top: 16px;">
+          <ul style="margin-top: 16px; padding-left: 20px; font-size: 14px; line-height: 1.8;">
+            <li><strong>Tip:</strong> Delicate cutting and piercing.</li>
+            <li><strong>Spine:</strong> Top thick edge, unsharpened.</li>
+            <li><strong>Edge:</strong> The working part of the blade.</li>
+            <li><strong>Heel:</strong> Rear part of the edge for chopping hard items.</li>
+            <li><strong>Handle:</strong> Where you grip.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lesson 2 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 2</span>
+          <h3 class="lesson-card__title">The Pinch Grip</h3>
+          <p style="color: var(--clr-gray-500); font-size: 14px; margin-bottom: 16px;">Hold the blade, not just the handle, for maximum control.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <img src="https://images.unsplash.com/photo-1600857317770-070868f0a0bb?auto=format&fit=crop&w=300&q=80" alt="Wrong Grip" style="width: 100%; height: 100px; object-fit: cover; border-radius: var(--radius-md);">
+              <p class="text-center mt-2" style="font-size: 14px; color: red;">❌ Pointing Finger</p>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1581486795493-2774a38dfc6d?auto=format&fit=crop&w=300&q=80" alt="Right Grip" style="width: 100%; height: 100px; object-fit: cover; border-radius: var(--radius-md);">
+              <p class="text-center mt-2" style="font-size: 14px; color: green;">✅ Pinch Grip</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 3 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 3</span>
+          <h3 class="lesson-card__title">The Claw Grip (Safety)</h3>
+          <p style="font-size: 14px; margin-bottom: 16px;">Always protect your guiding hand fingers.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <img src="https://images.unsplash.com/photo-1590680371465-4f40d12e8648?auto=format&fit=crop&w=300&q=80" alt="Wrong Safety Grip" style="width: 100%; height: 100px; object-fit: cover; border-radius: var(--radius-md);">
+              <p class="text-center mt-2" style="font-size: 14px; color: red;">❌ Fingers Flat</p>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=300&q=80" alt="Right Safety Grip" style="width: 100%; height: 100px; object-fit: cover; border-radius: var(--radius-md);">
+              <p class="text-center mt-2" style="font-size: 14px; color: green;">✅ Claw Grip</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Lesson 4 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 4</span>
+          <h3 class="lesson-card__title">The Rocking Motion</h3>
+          <p style="font-size: 14px; margin-bottom: 16px;">Keep the tip of the knife on the board and rock the heel up and down.</p>
+          <img src="https://images.unsplash.com/photo-1556910110-a5a63dfd393c?auto=format&fit=crop&w=600&q=80" alt="Rocking Motion" style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-md);">
+        </div>
+      </div>
+      
+      <!-- Lesson 5 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 5</span>
+          <h3 class="lesson-card__title">The Slice & Dice</h3>
+          <p style="font-size: 14px; margin-bottom: 16px;">Perfect for onions, tomatoes, and potatoes.</p>
+          <img src="https://images.unsplash.com/photo-1606132717804-0371307b8bce?auto=format&fit=crop&w=600&q=80" alt="Dicing" style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-md);">
+        </div>
+      </div>
+
+      <!-- Lesson 6 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 6</span>
+          <h3 class="lesson-card__title">The Julienne</h3>
+          <p style="font-size: 14px; margin-bottom: 16px;">Creating matchstick-sized cuts, perfect for carrots and bell peppers.</p>
+          <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=600&q=80" alt="Julienne" style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-md);">
+        </div>
+      </div>
+
+      <!-- Lesson 7 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 7</span>
+          <h3 class="lesson-card__title">Chiffonade</h3>
+          <p style="font-size: 14px; margin-bottom: 16px;">Rolling leafy greens and herbs, then slicing thinly.</p>
+          <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=600&q=80" alt="Chiffonade" style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-md);">
+        </div>
+      </div>
+
+      <!-- Lesson 8 -->
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <span class="challenge-badge">Lesson 8</span>
+          <h3 class="lesson-card__title">Board Stability</h3>
+          <p style="font-size: 14px; margin-bottom: 16px;">Never cut on a slipping board. Use a damp paper towel underneath.</p>
+          <img src="https://images.unsplash.com/photo-1615486171447-49f056c7e2b1?auto=format&fit=crop&w=600&q=80" alt="Board Stability" style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-md);">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: INGREDIENT GUIDE (Can I cut this?)
+       ========================================= -->
+  <div id="viewIngredients" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">🥕 Can I Cut This?</div>
+    </div>
+    
+    <div class="container section-padding">
+      <div class="search-bar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="ingredientSearch" class="form-input" placeholder="Search 50+ ingredients...">
+      </div>
+
+      <!-- Dynamic Content Container -->
+      <div id="ingredientContainer">
+        <!-- Rendered via JS -->
+      </div>
+      
+      <div id="ingredientNoResults" class="d-none text-center" style="color: var(--clr-gray-500); padding: 40px 0;">
+        <p style="font-size: 40px; margin-bottom: 10px;">🤔</p>
+        <p>We couldn't find that ingredient.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: RECIPE LIBRARY
+       ========================================= -->
+  <div id="viewRecipes" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">🍽️ Recipe Library</div>
+    </div>
+    
+    <div class="container section-padding">
+      <div id="recipeCategories" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 16px; margin-bottom: 16px;">
+        <button class="btn btn-outline active-filter" data-cat="All" style="padding: 6px 16px; min-width: max-content; background: var(--clr-charcoal); color: white;">All (100)</button>
+        <button class="btn btn-outline" data-cat="Breakfast" style="padding: 6px 16px; min-width: max-content;">Breakfast</button>
+        <button class="btn btn-outline" data-cat="Lunch" style="padding: 6px 16px; min-width: max-content;">Lunch</button>
+        <button class="btn btn-outline" data-cat="Dinner" style="padding: 6px 16px; min-width: max-content;">Dinner</button>
+        <button class="btn btn-outline" data-cat="Healthy" style="padding: 6px 16px; min-width: max-content;">Healthy</button>
+        <button class="btn btn-outline" data-cat="Salads" style="padding: 6px 16px; min-width: max-content;">Salads</button>
+        <button class="btn btn-outline" data-cat="Kids" style="padding: 6px 16px; min-width: max-content;">Kids</button>
+      </div>
+      
+      <!-- Dynamic Content Container -->
+      <div id="recipeContainer">
+        <!-- Rendered via JS -->
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- =========================================
+       VIEW: RECIPE DETAIL
+       ========================================= -->
+  <div id="viewRecipeDetail" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back" data-target="viewRecipes">←</div>
+      <div class="top-bar__title" id="rd-title-bar">Recipe</div>
+    </div>
+    
+    <div id="rd-hero" class="hero-image" style="background: var(--clr-gray-200); height: 250px; border-radius: 0 0 20px 20px;"></div>
+    
+    <div class="container section-padding">
+      <div style="display: flex; gap: 8px; margin-bottom: 12px; margin-top: 10px;" id="rd-badges">
+        <span class="challenge-badge">Category</span>
+      </div>
+      
+      <h2 id="rd-title" style="margin-bottom: 8px; font-size: 26px;">Recipe Title</h2>
+      <p id="rd-desc" style="color: var(--clr-gray-500); font-size: 15px; margin-bottom: 24px; line-height: 1.6;">Description</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background: var(--clr-gray-100); padding: 16px; border-radius: var(--radius-md); margin-bottom: 32px; text-align: center;">
+        <div>
+          <div style="font-size: 20px; margin-bottom: 4px;">🔪</div>
+          <div style="font-size: 11px; color: var(--clr-gray-500);">Prep</div>
+          <div id="rd-prep" style="font-size: 13px; font-weight: 600;">10m</div>
+        </div>
+        <div>
+          <div style="font-size: 20px; margin-bottom: 4px;">🍳</div>
+          <div style="font-size: 11px; color: var(--clr-gray-500);">Cook</div>
+          <div id="rd-cook" style="font-size: 13px; font-weight: 600;">20m</div>
+        </div>
+        <div>
+          <div style="font-size: 20px; margin-bottom: 4px;">🍽️</div>
+          <div style="font-size: 11px; color: var(--clr-gray-500);">Yield</div>
+          <div id="rd-serve" style="font-size: 13px; font-weight: 600;">2</div>
+        </div>
+        <div>
+          <div style="font-size: 20px; margin-bottom: 4px;">🔥</div>
+          <div style="font-size: 11px; color: var(--clr-gray-500);">Cals</div>
+          <div id="rd-cal" style="font-size: 13px; font-weight: 600;">300</div>
+        </div>
+      </div>
+      
+      <h3 style="margin-bottom: 16px; font-size: 20px;">Ingredients</h3>
+      <ul id="rd-ingredients" class="ingredient-tips" style="margin-bottom: 32px;">
+        <!-- Ingredients go here -->
+      </ul>
+      
+      <h3 style="margin-bottom: 16px; font-size: 20px;">Step-by-Step</h3>
+      <div id="rd-instructions" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px;">
+        <!-- Instructions go here -->
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: 21-DAY CHALLENGE
+       ========================================= -->
+  <div id="viewChallenge" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">📅 21-Day Challenge</div>
+    </div>
+    
+    <div class="container section-padding">
+      <h2 style="font-size: 22px;">Your Journey</h2>
+      <p style="font-size: 14px; color: var(--clr-gray-500);">Build knife confidence in just 21 days.</p>
+      
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <p style="font-size: 12px; text-align: right; font-weight: 600; color: var(--clr-orange);">Day 1 of 21</p>
+      
+      <div class="challenge-card mt-6">
+        <div class="d-flex justify-between align-center mb-4">
+          <span class="challenge-badge" style="margin: 0;">Day 1</span>
+          <span style="font-size: 20px;">🔥</span>
+        </div>
+        
+        <h3 style="font-size: 20px; margin-bottom: 16px;">The Foundation</h3>
+        
+        <div style="background: var(--clr-gray-100); padding: 12px; border-radius: var(--radius-md); margin-bottom: 12px; font-size: 14px;">
+          <strong>🎯 Today's Task:</strong> Practice the correct Pinch Grip.
+        </div>
+        
+        <div style="background: var(--clr-gray-100); padding: 12px; border-radius: var(--radius-md); margin-bottom: 12px; font-size: 14px;">
+          <strong>🍽️ Recipe:</strong> Simple Cucumber Sandwich (Slice cut)
+        </div>
+        
+        <div style="background: var(--clr-gray-100); padding: 12px; border-radius: var(--radius-md); margin-bottom: 24px; font-size: 14px;">
+          <strong>💡 Daily Tip:</strong> Keep your cutting board stable by placing a damp paper towel underneath it.
+        </div>
+        
+        <button id="btnCompleteChallenge" class="btn btn-primary">Mark Complete</button>
+      </div>
+      
+      <div class="challenge-card" style="opacity: 0.5;">
+        <div class="d-flex justify-between align-center mb-4">
+          <span class="challenge-badge" style="margin: 0; background: var(--clr-gray-200); color: var(--clr-gray-500);">Day 2</span>
+          <span style="font-size: 20px;">🔒</span>
+        </div>
+        <h3 style="font-size: 20px;">Mastering the Dice</h3>
+        <p style="font-size: 14px; margin-top: 8px;">Unlocks tomorrow.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: PRODUCT CARE
+       ========================================= -->
+  <div id="viewCare" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">🧼 Care & Maintenance</div>
+    </div>
+    
+    <div class="container section-padding">
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <h3 class="lesson-card__title">How to Clean</h3>
+          <p style="font-size: 14px; margin-bottom: 12px;">Proper cleaning extends the life of your board.</p>
+          <ul class="ingredient-tips">
+            <li>Wash immediately after use with warm soapy water.</li>
+            <li><strong>DO NOT</strong> submerge or soak in water.</li>
+            <li><strong>DO NOT</strong> place in the dishwasher.</li>
+            <li>Dry completely with a towel standing upright.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <h3 class="lesson-card__title">Deep Clean & Deodorize</h3>
+          <ul class="ingredient-tips">
+            <li>Sprinkle coarse salt over the board.</li>
+            <li>Use half a lemon to scrub the salt across the surface.</li>
+            <li>Let sit for 5 minutes, scrape off, rinse, and dry.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="lesson-card">
+        <div class="lesson-card__body">
+          <h3 class="lesson-card__title">Board Conditioning</h3>
+          <p style="font-size: 14px;">For wooden boards, oiling is essential every 3-4 weeks.</p>
+          <ul class="ingredient-tips">
+            <li>Use food-grade mineral oil.</li>
+            <li>Apply a generous coat and let it soak overnight.</li>
+            <li>Wipe off excess in the morning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       VIEW: WARRANTY
+       ========================================= -->
+  <div id="viewWarranty" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">🛡️ Warranty</div>
+    </div>
+    
+    <div class="container section-padding">
+      <div style="background: var(--clr-charcoal); color: white; padding: 30px 20px; border-radius: var(--radius-xl); text-align: center; margin-bottom: 24px;">
+        <div style="font-size: 40px; margin-bottom: 16px;">🛡️</div>
+        <h2 style="font-family: var(--font-heading); font-size: 24px;">Lifetime Support</h2>
+        <p style="font-size: 14px; opacity: 0.8; margin-top: 8px;">Your chopping board is covered under the Homixo satisfaction guarantee.</p>
+      </div>
+      
+      <button class="btn btn-outline mb-4">View Registration Details</button>
+      <button class="btn btn-outline mb-4">Read Terms & Conditions</button>
+      <a href="https://wa.me/919XXXXXXXXX" class="btn btn-outline" style="border-color: #25D366; color: #25D366;">💬 Contact Support</a>
+    </div>
+  </div>
+  
+  <!-- =========================================
+       VIEW: BONUS
+       ========================================= -->
+  <div id="viewBonus" class="view">
+    <div class="top-bar">
+      <div class="top-bar__back">←</div>
+      <div class="top-bar__title">🎁 Bonus Downloads</div>
+    </div>
+    
+    <div class="container section-padding">
+      <p style="color: var(--clr-gray-500); margin-bottom: 20px;">Download your exclusive PDF resources.</p>
+      
+      <!-- Actual links that trigger download -->
+      <a href="downloads/Weekly_Meal_Planner.html" target="_blank" style="display: block; margin-bottom: 16px; text-decoration: none;">
+        <div class="dash-card">
+          <div class="dash-card__icon" style="background: #e3f2fd; color: #1976d2;">📝</div>
+          <div class="dash-card__title" style="flex: 1;">Weekly Meal Planner</div>
+          <div style="color: var(--clr-orange); font-weight: bold;">↓</div>
+        </div>
+      </a>
+      
+      <a href="downloads/Healthy_Grocery_List.html" target="_blank" style="display: block; margin-bottom: 16px; text-decoration: none;">
+        <div class="dash-card">
+          <div class="dash-card__icon" style="background: #fbe9e7; color: #d84315;">🛒</div>
+          <div class="dash-card__title" style="flex: 1;">Healthy Grocery List</div>
+          <div style="color: var(--clr-orange); font-weight: bold;">↓</div>
+        </div>
+      </a>
+      
+      <a href="downloads/Kitchen_Inventory.html" target="_blank" style="display: block; margin-bottom: 16px; text-decoration: none;">
+        <div class="dash-card">
+          <div class="dash-card__icon" style="background: #e8f5e9; color: #2e7d32;">🍎</div>
+          <div class="dash-card__title" style="flex: 1;">Kitchen Inventory</div>
+          <div style="color: var(--clr-orange); font-weight: bold;">↓</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- =========================================
+       BOTTOM NAVIGATION
+       ========================================= -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item active" data-target="viewHome">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="#" class="nav-item" data-target="viewAcademy">
+      <span class="nav-icon">🎓</span>
+      <span>Learn</span>
+    </a>
+    <a href="#" class="nav-item" data-target="viewRecipes">
+      <span class="nav-icon">🍽️</span>
+      <span>Recipes</span>
+    </a>
+    <a href="#" class="nav-item" data-target="viewChallenge">
+      <span class="nav-icon">📅</span>
+      <span>Challenge</span>
+    </a>
+    <a href="#" class="nav-item" data-target="viewDashboard">
+      <span class="nav-icon">👤</span>
+      <span>Profile</span>
+    </a>
+  </nav>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

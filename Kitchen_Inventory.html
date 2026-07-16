@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homixo Kitchen Inventory</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; color: #2D3B40; background: #FAFAF9; }
+    h1 { color: #F27033; text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    th, td { border: 1px solid #eee; padding: 10px; text-align: left; }
+    th { background: #2D3B40; color: white; }
+    .input-cell { border: none; background: transparent; width: 100%; font-family: inherit; font-size: 14px; outline: none; }
+    @media print {
+      body { background: white; }
+      table { box-shadow: none; border: 1px solid #ddd; }
+      button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Homixo Kitchen Inventory 🍎</h1>
+  <p style="text-align: center; color: #666; margin-bottom: 30px;">Keep track of what's in your fridge and pantry to minimize waste.</p>
+  
+  <table>
+    <tr>
+      <th style="width: 40%">Item Name</th>
+      <th style="width: 30%">Category</th>
+      <th style="width: 30%">Quantity / Expiry</th>
+    </tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+    <tr><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td><td><input class="input-cell" placeholder="..."></td></tr>
+  </table>
+  
+  <button onclick="window.print()" style="display: block; width: 100%; padding: 15px; background: #2D3B40; color: white; border: none; border-radius: 8px; font-size: 16px; margin-top: 20px; cursor: pointer;">Save as PDF / Print</button>
+</body>
+</html>
